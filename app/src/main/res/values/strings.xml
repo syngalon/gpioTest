@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GpioTest</string>
+    <string name="led_test">LED TEST</string>
+    <string name="read_brightness">Read Brightness</string>
+    <string name="write_brightness">Write Brightness</string>
+    <string name="led_red_value">value of led red</string>
+    <string name="choose_read_color">需要读取的Led颜色:</string>
+    <string name="choose_write_color">需要写入的Led颜色:</string>
+    <string name="input_color">请输入亮度[0~255]:</string>
+    <string name="input_brightness">请输入亮度值</string>
+</resources>

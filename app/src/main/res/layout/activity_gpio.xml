@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GpioActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Spinner
+        android:id="@+id/r_led_color_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:entries="@array/led_colors"
+        app:layout_constraintBottom_toTopOf="@+id/readBtn"
+        app:layout_constraintEnd_toEndOf="@+id/w_led_color_spinner"
+        app:layout_constraintStart_toStartOf="@+id/w_led_color_spinner" />
+
+    <TextView
+        android:id="@+id/ledsTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/led_test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/readBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="114dp"
+        android:text="@string/read_brightness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/writeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="141dp"
+        android:text="@string/write_brightness"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ledRedValueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/led_red_value"
+        app:layout_constraintBottom_toTopOf="@+id/deviderView"
+        app:layout_constraintStart_toEndOf="@+id/readBtn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="377dp"
+        android:layout_marginBottom="177dp"
+        android:text="@string/write_brightness"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/w_led_color_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/led_colors"
+        app:layout_constraintBottom_toTopOf="@+id/etBrightness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvChooseWriteLedColor" />
+
+    <TextView
+        android:id="@+id/tvChooseReadLedColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="@string/choose_read_color"
+        app:layout_constraintBottom_toTopOf="@+id/readBtn"
+        app:layout_constraintEnd_toEndOf="@+id/ledsTest"
+        app:layout_constraintStart_toEndOf="@+id/ledsTest" />
+
+    <TextView
+        android:id="@+id/tvChooseWriteLedColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/choose_write_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deviderView" />
+
+    <TextView
+        android:id="@+id/tvBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/input_color"
+        app:layout_constraintBottom_toTopOf="@+id/writeBtn"
+        app:layout_constraintStart_toStartOf="@+id/writeBtn" />
+
+    <View
+        android:id="@+id/deviderView"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/w_led_color_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/w_led_color_spinner"
+        app:layout_constraintStart_toStartOf="@+id/w_led_color_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/readBtn" />
+
+    <EditText
+        android:id="@+id/etBrightness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:hint="@string/input_brightness"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/writeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvChooseWriteLedColor" />
+
+</android.support.constraint.ConstraintLayout>
